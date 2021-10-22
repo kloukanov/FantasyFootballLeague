@@ -1,5 +1,5 @@
 <div class="parent">
-    <app-team-list class="child"></app-team-list>
-    <app-transfers-list class="child"></app-transfers-list>
+    <app-team-list class="child" [playerArrayInChild]="playerArray" (removePlayerEvent)="removePlayer($event)"></app-team-list>
+    <app-transfers-list class="child" [playerArrayInChild]="allPlayers" (addPlayerEvent)="addPlayer($event)"></app-transfers-list>
 </div>
 
