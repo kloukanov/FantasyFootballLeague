@@ -1,0 +1,10 @@
+<div class="playerHolder">
+    <p>{{playerItem.name}}</p>
+
+    <button *ngIf="isAdd(); else isRemove" type="button" (click)="addPlayer()">{{buttonAction}}</button>
+   
+    <ng-template #isRemove>
+        <button type="button" (click)="removePlayer()">{{buttonAction}}</button>
+    </ng-template>
+
+</div>

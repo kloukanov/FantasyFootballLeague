@@ -1,1 +1,6 @@
-<div class="container">transfer list</div>
+<div class="container">
+    
+    <h2>transfer list</h2>
+    <app-player [playerItem]="player" *ngFor="let player of playerArrayInChild" [buttonAction]="buttonLabelInChild" (addPlayerEvent)="addPlayer($event)"></app-player>
+
+</div>

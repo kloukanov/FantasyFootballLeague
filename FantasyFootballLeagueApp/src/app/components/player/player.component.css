@@ -1,0 +1,7 @@
+.playerHolder{
+    display: grid;
+    text-align: center;
+    background-color: rgb(168, 211, 209);
+    margin-bottom: 5px;
+    border-radius: 5px;
+}

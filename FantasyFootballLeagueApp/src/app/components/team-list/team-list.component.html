@@ -1,1 +1,6 @@
-<div class="container">team list</div>
+<div class="container">
+    
+    <h2>team list</h2>
+    <app-player [playerItem]="player" *ngFor="let player of playerArrayInChild" [buttonAction]="buttonLabelInChild" (removePlayerEvent)="removePlayer($event)"></app-player>
+
+</div>
