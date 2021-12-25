@@ -1,5 +1,13 @@
 <div class="parent">
-    <app-team-list class="child" [playerArrayInChild]="playerArray" (removePlayerEvent)="removePlayer($event)"></app-team-list>
-    <app-transfers-list class="child" [playerArrayInChild]="allPlayers" (addPlayerEvent)="addPlayer($event)"></app-transfers-list>
+    <!-- <app-team-list class="child" [playerArrayInChild]="playerArray" (removePlayerEvent)="removePlayer($event)"></app-team-list> -->
+    <div class="child">
+        <h2>team list</h2>
+        <app-transfer-info></app-transfer-info>
+        <app-team-pitch class=""></app-team-pitch>
+    </div>
+    <div class="child">
+        <h2>transfer list</h2>
+        <app-transfers-list class=""></app-transfers-list>
+    </div>
 </div>
 

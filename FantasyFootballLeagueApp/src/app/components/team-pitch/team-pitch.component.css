@@ -1,0 +1,34 @@
+.pitch{
+    background-color: rgb(143, 188, 169);
+    width: 800px;
+    height: 900px;
+    
+
+}
+
+.goalkeeper{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.defence{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.midfield{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+.attack{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+app-player{
+    margin: auto;
+    width: 50%;
+    width: 100px;
+    margin-top: 30px;
+}

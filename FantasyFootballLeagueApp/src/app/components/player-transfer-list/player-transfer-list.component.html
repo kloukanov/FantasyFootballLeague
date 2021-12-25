@@ -1,0 +1,22 @@
+<div class="playerHolder">
+    
+
+    <!-- <button *ngIf="isAdd(); else isRemove" type="button" (click)="addPlayer()">{{buttonAction}}</button>
+   
+    <ng-template #isRemove>
+        <button class="btn-1" type="button" (click)="removePlayer()">{{buttonAction}}</button>
+    </ng-template> -->
+
+    <!-- <button class="btn-1">add</button> -->
+    <button class="btn-2" type="button"> i </button>
+
+
+    <p style="color: rgb(0, 0, 0);">{{playerItem.name}}</p>
+    <p class="a" style="text-align: center;">{{playerItem.price.toFixed(1)}}</p>
+    <p class="a" style="text-align: center;">{{playerItem.points}}</p>
+ 
+
+    <button class="btn-1" type="button"  (click)="addPlayer(playerItem)" [style.background-color]="playerItem.isSelected ? '#8a1f1f' : '#1F8A69'"> {{playerItem.isSelected ? "remove" : "add"}}</button>
+
+
+</div>

@@ -1,0 +1,17 @@
+<div class="gwInfo">
+    <!-- <div> -->
+        <button class="btn-1" type="button"  (click)="resetTeam()"> reset </button>
+    <!-- </div> -->
+    <div>
+        <h5>Free Transfers</h5>
+        <h3>unlimited</h3>
+    </div>
+    <div>
+        <h5>Cost</h5>
+        <h3>free</h3>
+    </div>
+    <div>
+        <h5>Money Remaining</h5>
+        <h3 [style.color]="this.teamService.getTotalMoney() < 0 ? '#8a1f1f' : '#1F8A69'">{{this.teamService.getTotalMoney().toFixed(1)}}</h3>
+    </div>
+</div>

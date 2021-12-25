@@ -1,10 +1,15 @@
-<div class="playerHolder">
-    <p>{{playerItem.name}}</p>
+<div class="playerHolder" [style.background-color]="playerItem.isSelected ? '#1f4c8a' : '#a8d3d1'" [style.color]="playerItem.isSelected ? 'white' : 'black'">
+    
 
-    <button *ngIf="isAdd(); else isRemove" type="button" (click)="addPlayer()">{{buttonAction}}</button>
+    <!-- <button *ngIf="isAdd(); else isRemove" type="button" (click)="addPlayer()">{{buttonAction}}</button>
    
     <ng-template #isRemove>
-        <button type="button" (click)="removePlayer()">{{buttonAction}}</button>
-    </ng-template>
+        <button class="btn-1" type="button" (click)="removePlayer()">{{buttonAction}}</button>
+    </ng-template> -->
+
+    <!-- <button class="btn-1">add</button> -->
+
+    <p>{{playerItem.name}}</p>
+    <button class="btn-1" type="button" (click)="removePlayer(playerItem)"> remove </button>
 
 </div>

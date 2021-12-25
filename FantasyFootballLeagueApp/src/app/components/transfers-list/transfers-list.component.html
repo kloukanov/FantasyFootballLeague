@@ -1,6 +1,8 @@
 <div class="container">
     
-    <h2>transfer list</h2>
-    <app-player [playerItem]="player" *ngFor="let player of playerArrayInChild" [buttonAction]="buttonLabelInChild" (addPlayerEvent)="addPlayer($event)"></app-player>
+
+    <app-player-transfer-list [playerItem]="player" *ngFor="let player of transferPlayers"></app-player-transfer-list>
+
+    <!-- <h3>{{transferPlayers[1].name}}</h3> -->
 
 </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Player } from "../../classes/Player";
+import { Player } from "../../classes/Player.model";
+import { TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-transfers-list',
@@ -8,27 +9,16 @@ import { Player } from "../../classes/Player";
 })
 export class TransfersListComponent implements OnInit {
 
-  // shared player array from team component
-  @Input() playerArrayInChild: any;
-  // label of the add/remove button
-  public buttonLabelInChild: string;
+  transferPlayers:Player[] = [];
 
-  // event emitter for addPlayer functionality
-  @Output()
-  addPlayerEvent = new EventEmitter<number>();
-
-  constructor() {
-    // sets the add/remove button to specified value
-    this.buttonLabelInChild = "add";
-   }
+  constructor(private teamService:TeamService) {}
 
   ngOnInit(): void {
+    this.transferPlayers = this.teamService.getAllPlayers();
   }
 
-  // initiates event emitter to add player to user's current list 
-  addPlayer(id:number)
-  {
-    this.addPlayerEvent.next(id);
+  addPlayer(player: Player){
+    this.teamService.addToTeam(player);
   }
 
 }

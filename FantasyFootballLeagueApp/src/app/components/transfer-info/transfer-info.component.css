@@ -1,0 +1,25 @@
+.gwInfo{
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    background-color: gainsboro;
+}
+
+.btn-1{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    background-color:#1F8A69;
+    color: white;
+    border: none;
+    transition-duration: 0.4s;
+}
+
+.btn-1:hover{
+    background-color: #0289FF;
+    cursor: pointer;
+}
+
+h5{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}

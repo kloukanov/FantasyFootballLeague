@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Player } from 'src/app/classes/Player';
+import { Player } from 'src/app/classes/Player.model';
+import { TeamService } from 'src/app/services/team.service';
 
 @Component({
   selector: 'app-player',
@@ -10,10 +11,13 @@ export class PlayerComponent implements OnInit {
 
   // player object passed from parent
   @Input()
-  playerItem: Player = new Player;
+  playerItem: Player = new Player(0, "empty");
   // label of the add/remove button passed from the parent
   @Input()
   buttonAction: string = "";
+  
+  // default player name to empty
+  // playerName: string = "Empty";
 
   // event emitter for addPlayer functionality
   @Output()
@@ -22,9 +26,22 @@ export class PlayerComponent implements OnInit {
   @Output()
   removePlayerEvent = new EventEmitter<number>();
 
-  constructor() { }
+  constructor(private teamService: TeamService) { }
+
+  removePlayer(player: Player){
+    this.teamService.removeFromTeam(player);
+  }
+
 
   ngOnInit(): void {
+
+    // check if player name has been populated and set
+
+    // if(this.playerItem.name != undefined){
+    //   this.playerName = this.playerItem.name;
+    // }
+    
+
   }
 
   // event emitter to add player to user's current list 
@@ -32,11 +49,6 @@ export class PlayerComponent implements OnInit {
     this.addPlayerEvent.next(this.playerItem.id);
   }
 
-  // event emitter to remove player from user's current list 
-  removePlayer(): void {
-
-    this.removePlayerEvent.next(this.playerItem.id);
-  }
 
   // helper function to check if the button label is set to add/remove
   isAdd():boolean{

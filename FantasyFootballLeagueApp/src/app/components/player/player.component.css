@@ -2,6 +2,29 @@
     display: grid;
     text-align: center;
     background-color: rgb(168, 211, 209);
+    /* background-image: url("../../../assets/player_cards_template.png"); */
     margin-bottom: 5px;
     border-radius: 5px;
+    width: 113px;
+    height: 181px;
+    background-size:100%; 
+    background-repeat: no-repeat;
+    /* background-position:50% 50%; */
+}
+
+
+.btn-1{
+    height: 20px;
+    order: 2;
+    background-color:#1F8A69;
+    color: white;
+    border: none;
+    transition-duration: 0.4s;
+    /* position: relative; */
+    /* top: 118px; */
+}
+
+.btn-1:hover{
+    background-color: #0289FF;
+    cursor: pointer;
 }

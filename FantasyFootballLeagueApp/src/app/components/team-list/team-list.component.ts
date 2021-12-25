@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-import { Player } from "../../classes/Player";
+import { Player } from "../../classes/Player.model";
 
 @Component({
   selector: 'app-team-list',
@@ -20,9 +20,10 @@ export class TeamListComponent implements OnInit {
   constructor() {
     // sets the add/remove button to specified value
     this.buttonLabelInChild = "remove";
+   
    }
 
-  ngOnInit(): void {
+  ngOnInit(): void {;
   }
 
   // initiates event emitter to remove player from user's current list 
