@@ -1,0 +1,16 @@
+.mat-toolbar
+{
+    background-color: rgb(13, 41, 68);
+    color: rgb(255, 255, 255);
+    height: 40px;
+}
+
+.mat-button
+{
+    color: rgb(255, 255, 255);
+}
+
+.spacer
+{
+    flex: 1 1 auto;
+}

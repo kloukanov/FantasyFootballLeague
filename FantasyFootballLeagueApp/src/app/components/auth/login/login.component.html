@@ -1,0 +1,23 @@
+<div class="loginPage">
+  <h1 class="title"> Fantasy Football League </h1>
+  <div class="loginForm" >
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+          <div class="container">
+            <span class="new-user">Don't have an account? <a href="#" style="color: #04AA6D ">Sign Up here!</a></span>
+            <input type="text" placeholder="username" name="username" ngModel required #username="ngModel">
+            <input type="password" placeholder="password" name="password" ngModel required #password="ngModel">
+            <!-- <button routerLink="/transfers" type="submit">Login</button> -->
+            <button type="submit">Login</button>
+            <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+            </label>
+          </div>
+        
+          <div class="container" style="background-color:#f1f1f1">
+            <span class="psw">Forgot <a  style="color: rgb(255, 0, 0); ">password?</a></span>
+          </div>
+          
+        </form> 
+  </div>
+</div>
+

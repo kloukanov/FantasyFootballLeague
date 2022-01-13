@@ -1,3 +1,11 @@
+.navbar{
+
+    background-color: red;
+    /* width: max-content; */
+    width: 100%;
+
+}
+
 .parent {
     display: flex;
     /* height: 300px; */
@@ -6,7 +14,7 @@
 .child {
     /* width: 150px;
     height: 100px; */
-    height: 1000px;
+    /* height:100%; */
     width: 800px;
     margin: auto;
     text-align: center;
