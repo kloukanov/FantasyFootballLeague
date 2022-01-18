@@ -1,29 +1,43 @@
+.container{
+    display: grid;
+    grid-template-columns: 800px 200px ;
+}
+
 .pitch{
     background-color: rgb(143, 188, 169);
     width: 800px;
     height: 830px;
-    
+}
 
+.bench{
+    background-color: rgb(119, 133, 127);
+    width: 200px;
+    height: 830px;
 }
 
 .goalkeeper{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto  ;
 }
 
 .defence{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
 }
 
 .midfield{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto;
 }
 
 .attack{
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto ;
+}
+
+.sub{
+    display: grid;
+    grid-template-columns: auto;
 }
 
 app-player{

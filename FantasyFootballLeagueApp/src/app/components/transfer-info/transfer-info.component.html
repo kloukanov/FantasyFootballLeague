@@ -1,7 +1,5 @@
 <div class="gwInfo">
-    <!-- <div> -->
-        <button class="btn-1" type="button"  (click)="resetTeam()"> reset </button>
-    <!-- </div> -->
+    <button class="btn-1" type="button"  (click)="resetTeam()"> reset </button>
     <div>
         <h5>Free Transfers</h5>
         <h3>unlimited</h3>
@@ -9,6 +7,18 @@
     <div>
         <h5>Cost</h5>
         <h3>free</h3>
+    </div>
+    <div>
+        <mat-label>Formation</mat-label>
+        <mat-select [(value)]="this.formation" (selectionChange)="changeFormation($event.value)">
+            <mat-option value="one">4-4-2</mat-option>
+            <mat-option value="two">4-5-1</mat-option>
+            <mat-option value="three">4-3-3</mat-option>
+            <mat-option value="four">3-4-3</mat-option>
+            <mat-option value="five">3-5-2</mat-option>
+            <mat-option value="six">5-3-2</mat-option>
+            <mat-option value="seven">5-4-1</mat-option>
+        </mat-select>
     </div>
     <div>
         <h5>Money Remaining</h5>

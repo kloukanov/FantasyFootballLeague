@@ -19,6 +19,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field'; 
 import { TransferSearchComponent } from './components/transfer-search/transfer-search.component';
 import { HomeComponent } from './components/home/home.component';
 import { MyTeamComponent } from './components/my-team/my-team.component';
@@ -51,7 +53,9 @@ import { FixturesComponent } from './components/fixtures/fixtures.component';
     HttpClientModule,
     BrowserAnimationsModule,
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule
   ],
   providers: [TeamService], // global instance -> if wanted a instance for one component then add this to that component as a provider in the component devorator
   bootstrap: [AppComponent]

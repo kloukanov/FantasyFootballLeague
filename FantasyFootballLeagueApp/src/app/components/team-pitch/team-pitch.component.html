@@ -1,32 +1,41 @@
 <div class="container">
     <div class="pitch">
-        <div class="goalkeeper">
+        <div class="attack">
             <app-player style="visibility: hidden;"></app-player>
-            <app-player [playerItem]="teamPlayers[0]"></app-player>
+            <app-player [playerItem]="teamPlayers[12]"></app-player>
+            <app-player [playerItem]="teamPlayers[13]"></app-player>
             <app-player style="visibility: hidden;"></app-player>
-            <app-player [playerItem]="teamPlayers[1]"></app-player>
-            <app-player style="visibility: hidden;"></app-player>
-        </div>
-        <div class="defence">
-            <app-player [playerItem]="teamPlayers[2]"></app-player>
-            <app-player [playerItem]="teamPlayers[3]"></app-player>
-            <app-player [playerItem]="teamPlayers[4]"></app-player>
-            <app-player [playerItem]="teamPlayers[5]"></app-player>
-            <app-player [playerItem]="teamPlayers[6]"></app-player>
         </div>
         <div class="midfield">
             <app-player [playerItem]="teamPlayers[7]"></app-player>
             <app-player [playerItem]="teamPlayers[8]"></app-player>
             <app-player [playerItem]="teamPlayers[9]"></app-player>
             <app-player [playerItem]="teamPlayers[10]"></app-player>
+        </div>
+        <div class="defence">
+            <app-player [playerItem]="teamPlayers[2]"></app-player>
+            <app-player [playerItem]="teamPlayers[3]"></app-player>
+            <app-player [playerItem]="teamPlayers[4]"></app-player>
+            <app-player [playerItem]="teamPlayers[5]"></app-player>
+        </div>
+        <div class="goalkeeper">
+            <app-player style="visibility: hidden;"></app-player>
+            <app-player [playerItem]="teamPlayers[0]"></app-player>
+            <app-player style="visibility: hidden;"></app-player>
+        </div>
+    </div>
+    <div class="bench">
+        <div class="sub">
+            <app-player [playerItem]="teamPlayers[1]"></app-player>
+        </div>
+        <div class="sub">
+            <app-player [playerItem]="teamPlayers[6]"></app-player>
+        </div>
+        <div class="sub">
             <app-player [playerItem]="teamPlayers[11]"></app-player>
         </div>
-        <div class="attack">
-            <app-player style="visibility: hidden;"></app-player>
-            <app-player [playerItem]="teamPlayers[12]"></app-player>
-            <app-player [playerItem]="teamPlayers[13]"></app-player>
+        <div class="sub">
             <app-player [playerItem]="teamPlayers[14]"></app-player>
-            <app-player style="visibility: hidden;"></app-player>
         </div>
     </div>
 </div>

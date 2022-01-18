@@ -8,6 +8,8 @@ export class TeamService {
 
   private totalMoney: number = 100.0;
 
+  private formation: string = "one";
+
   private players:Player[] = [
     {"name": 'Empty', "id": 0, "isSelected": false, points: 0, position:"gk", price: 0.0}, 
     {"name": 'Empty', "id": 0, "isSelected": false, points: 0, position:"gk", price: 0.0}, 
@@ -57,6 +59,14 @@ export class TeamService {
   
   getTotalMoney(){
     return this.totalMoney;
+  }
+
+  getFormation(){
+    return this.formation;
+  }
+
+  setFormation(frmt: string){
+    this.formation = frmt;
   }
 
   addToTeam(player: Player){
